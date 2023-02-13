@@ -21,3 +21,5 @@
  - docker run xml-parser:latest
  
 > Note: Postman collection as well provided with in the workspace for easier testing purpous.
+
+> TODO: We can improve the docker-compose file to be a multi stage one, where build of the spring boot app, building of the image and running of image will be done at once. 
