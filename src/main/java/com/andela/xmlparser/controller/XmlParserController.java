@@ -26,10 +26,10 @@ import java.util.List;
 @Tag(name = "Xml-Parser", description = "Xml-Parser API")
 public class XmlParserController {
 
-    private FileUploadService fileUploadService;
+    private final FileUploadService fileUploadService;
 
     @Autowired
-    public XmlParserController(FileUploadService fileUploadService, XmlParser xmlParser) {
+    public XmlParserController(final FileUploadService fileUploadService) {
         this.fileUploadService = fileUploadService;
     }
 
