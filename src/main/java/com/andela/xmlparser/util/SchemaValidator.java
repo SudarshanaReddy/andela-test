@@ -25,4 +25,6 @@ public interface SchemaValidator {
         }
         return true;
     }
+
+    //future abstraction can go here.
 }
