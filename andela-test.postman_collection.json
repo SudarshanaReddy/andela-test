@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "b42efa90-0066-44a4-8952-4d0eba92eb71",
+		"name": "andela-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "file-upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/macshack/Documents/epaper.xml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/xml-parser/file-upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xml-parser",
+						"file-upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "file-upload-response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/macshack/Documents/epaper.xml"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/xml-parser/file-upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"xml-parser",
+								"file-upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 03:54:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorMessage\": null,\n    \"xmlFileCatalog\": [\n        {\n            \"newsPaperName\": \"bcc\",\n            \"uploadTime\": \"09:24:09.271860\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "file-upload-schema-validation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/macshack/Documents/epaper.xml"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/xml-parser/file-upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"xml-parser",
+								"file-upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 06:03:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorMessage\": \"cvc-complex-type.2.4.a: Invalid content was found starting with element 'newsperName'. One of '{newspaperName}' is expected.\",\n    \"xmlFileCatalog\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "sort-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/xml-parser/paging?sortOrder=ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xml-parser",
+						"paging"
+					],
+					"query": [
+						{
+							"key": "sortOrder",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sort-api-response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/xml-parser/paging?sortOrder=ASC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"xml-parser",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "sortOrder",
+									"value": "ASC"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 03:54:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorMessage\": null,\n    \"xmlFileCatalog\": [\n        {\n            \"newsPaperName\": \"abb\",\n            \"uploadTime\": \"09:23:11.184842\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        },\n        {\n            \"newsPaperName\": \"bcc\",\n            \"uploadTime\": \"09:24:09.271860\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "filter-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/xml-parser/paging?filterField=abb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xml-parser",
+						"paging"
+					],
+					"query": [
+						{
+							"key": "filterField",
+							"value": "abb"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "filter-api-response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/xml-parser/paging?filterField=abb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"xml-parser",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "filterField",
+									"value": "abb"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 03:56:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorMessage\": null,\n    \"xmlFileCatalog\": [\n        {\n            \"newsPaperName\": \"abb\",\n            \"uploadTime\": \"09:23:11.184842\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "pagination-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/xml-parser/paging?page=0&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xml-parser",
+						"paging"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "pagination-api-response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/xml-parser/paging?page=0&size=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"xml-parser",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 03:57:25 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorMessage\": null,\n    \"xmlFileCatalog\": [\n        {\n            \"newsPaperName\": \"bcc\",\n            \"uploadTime\": \"09:24:09.271860\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        },\n        {\n            \"newsPaperName\": \"abb\",\n            \"uploadTime\": \"09:23:11.184842\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "sort-with-pagination-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/xml-parser/paging?sortOrder=ASC&page=0&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xml-parser",
+						"paging"
+					],
+					"query": [
+						{
+							"key": "sortOrder",
+							"value": "ASC"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sort-with-pagination-api-response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/xml-parser/paging?sortOrder=ASC&page=0&size=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"xml-parser",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "sortOrder",
+									"value": "ASC"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 03:58:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorMessage\": null,\n    \"xmlFileCatalog\": [\n        {\n            \"newsPaperName\": \"abb\",\n            \"uploadTime\": \"09:23:11.184842\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        },\n        {\n            \"newsPaperName\": \"bcc\",\n            \"uploadTime\": \"09:24:09.271860\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "sort-filter-paginate-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/xml-parser/paging?sortOrder=ASC&filterField=abb&page=0&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xml-parser",
+						"paging"
+					],
+					"query": [
+						{
+							"key": "sortOrder",
+							"value": "ASC"
+						},
+						{
+							"key": "filterField",
+							"value": "abb"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sort-filter-paginate-api-response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/xml-parser/paging?sortOrder=ASC&filterField=abb&page=0&size=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"xml-parser",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "sortOrder",
+									"value": "ASC"
+								},
+								{
+									"key": "filterField",
+									"value": "abb"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 03:59:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorMessage\": null,\n    \"xmlFileCatalog\": [\n        {\n            \"newsPaperName\": \"abb\",\n            \"uploadTime\": \"09:23:11.184842\",\n            \"fileName\": \"file\",\n            \"width\": \"1280\",\n            \"height\": \"752\",\n            \"dpi\": \"160\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
